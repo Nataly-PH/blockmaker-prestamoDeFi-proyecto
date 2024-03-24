@@ -1,10 +1,11 @@
-import { AppLayout } from "./components/ui/layauts"
+import { AppLayout } from './components/ui/layauts'
+import { Home } from './pages'
 
 
 function App() {
   return ( 
     <AppLayout>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Home></Home>
     </AppLayout>
   )
 }
