@@ -1,3 +1,5 @@
+import { ConnectKitButton } from "connectkit";
+
 export default function Header(){
     return <header className="border-b shadow py-2 px-3 flex justify-between items-center">
         {/* Logo para version mobile */}
@@ -9,7 +11,8 @@ export default function Header(){
             <span className="text-sm font-bold ml-2">Blockmaker PrestamoDeFi</span>
         </div>
         
-        <button className="bg-gray-100 rounded-xl px-2 text-sm h-fit py-2">Connect Wallet</button>
+        <ConnectKitButton showBalance></ConnectKitButton>
+
         
     </header>
 
