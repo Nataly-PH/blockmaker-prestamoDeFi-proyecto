@@ -1,12 +1,21 @@
-import { AppLayout } from './components/ui/layauts'
-import { Home } from './pages'
+import { ConnectKitProvider } from "connectkit";
+import { WagmiConfig } from "wagmi";
+import { AppLayout } from "./components/ui/layauts";
+import { config } from "./config/wagmi";
+import { Home } from "./pages";
+
 
 
 function App() {
+  
   return ( 
-    <AppLayout>
-      <Home></Home>
-    </AppLayout>
+    <WagmiConfig config={config}>
+      <ConnectKitProvider>
+        <AppLayout>
+          <Home></Home>
+        </AppLayout>
+      </ConnectKitProvider>
+    </WagmiConfig>
   )
 }
 
